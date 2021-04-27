@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
 import axios from 'axios'
+import config from '../config/config'
 
 export default function Register({ token }) {
 

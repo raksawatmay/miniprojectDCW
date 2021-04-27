@@ -39,7 +39,7 @@ const index = () => {
               className={styles.btn}
               onClick={() => selCar(item.id)}
             >
-              Buy
+              Select
             </button></div></div></div>
         );
       });

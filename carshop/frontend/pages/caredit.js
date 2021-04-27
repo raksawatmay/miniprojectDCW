@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/student.module.css";
 import withAuth from "../components/withAuth";
 import Navbar from "../components/navbar";
+import Image from 'next/image';
 const URL = "http://localhost/api/cars";
 const admin = ({ token }) => {
   const [user, setUser] = useState({});
@@ -11,6 +12,7 @@ const admin = ({ token }) => {
   const [model, setModel] = useState("");
   const [color, setColor] = useState("");
   const [price, setPrice] = useState();
+  const [scr, setScr] = useState("");
   const [car, setCar] = useState({});
   useEffect(() => {
     getCars();
@@ -46,6 +48,7 @@ const admin = ({ token }) => {
       model,
       color,
       price,
+      scr,
     });
     console.log(result);
     getCars();
@@ -62,6 +65,7 @@ const admin = ({ token }) => {
       model,
       color,
       price,
+      scr,
     });
     console.log(result);
     getCars();
@@ -71,11 +75,13 @@ const admin = ({ token }) => {
     if (cars && cars.length) {
       return cars.map((item, index) => {
         return (
+          <div>
           <div className={styles.listItem} key={index}>
             <b>Brand:</b> {item.brand} <br />
             <b>Model:</b> {item.model} <br />
             <b>Color:</b> {item.color} <br />
-            <b>Price:</b> {item.price}
+            <b>Price:</b> {item.price} <br />
+            <div><Image src={item.src} alt="car1" width={150} height={150}/></div>
             <div className={styles.edit_button}>
               <button
                 className={styles.button_get}
@@ -96,6 +102,7 @@ const admin = ({ token }) => {
                 Delete
               </button>
             </div>
+          </div>
           </div>
         );
       });
@@ -137,16 +144,24 @@ const admin = ({ token }) => {
           name="price"
           onChange={(e) => setPrice(e.target.value)}
         ></input>
+         Picture:
+        <input
+          type="text"
+          name="picture"
+          onChange={(e) => setScr(e.target.value)}
+        ></input>
         <button
           className={styles.button_add}
-          onClick={() => addCar(brand, model, color, price)}
+          onClick={() => addCar(brand, model, color, price, scr)}
         >
           Add
         </button>
       </div>
 
       <div className={styles.list}>{showCars()}</div>
-      <div className={styles.list1}><b><i><ins>(selected car)</ins></i></b> <b>  Brand:</b>{car.brand}<b>  Model:</b>{car.model} <b>  Color:</b>{car.color}  <b>Price:</b>{car.price}</div>
+      <div>
+        <div className={styles.list1}><b><i><ins>(selected car)</ins></i></b> <b> &nbsp;Brand:</b>{car.brand}<b>&nbsp;Model:</b>{car.model} <b>&nbsp;Color:</b>{car.color}&nbsp;<b>Price:</b>{car.price} </div>
+      </div>
     </div>
   );
 };
