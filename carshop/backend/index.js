@@ -5,15 +5,15 @@ const express = require("express"),
   cors = require("cors"),
   cookie = require("cookie");
 
-const bcrypt = require("bcrypt");
-
 const db = require("./database.js");
 let users = db.users;
 
-require("./passport.js");
-
 const router = require("express").Router(),
   jwt = require("jsonwebtoken");
+
+const bcrypt = require("bcrypt");
+
+require("./passport.js");
 
 app.use("/api", router);
 router.use(cors({ origin: "http://localhost:3000", credentials: true }));
