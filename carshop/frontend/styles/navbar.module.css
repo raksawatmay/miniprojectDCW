@@ -22,10 +22,27 @@ ol.navbar li a {
   
 ol.navbar li a:hover:not(.active) {background-color:  lightblue;}
 
-ol.navbar li.right {float: right;}
-
+ol.navbar li.right {float: right; text-shadow: 0px 0px 10px plum, 0 0 5px blue;}
 ol.navbar li.text{
-  text-shadow: 0px 0px 20px orangered, 0 0 5px blue;
+  text-shadow: 0px 0px 10px orangered, 0 0 5px blue;
+}
+ol.navbar li.text1{
+  text-shadow: 0px 0px 10px yellow, 0 0 5px blue;
+}
+ol.navbar li.text2{
+  text-shadow: 0px 0px 10px greenyellow, 0 0 5px blue;
+}
+ol.navbar li.text3{
+  text-shadow: 0px 0px 10px lightseagreen, 0 0 5px blue;
+}
+ol.navbar li.text4{
+  text-shadow: 0px 0px 10px lightblue, 0 0 5px blue;
+}
+ol.navbar li.text5{
+  text-shadow: 0px 0px 10px lightskyblue, 0 0 5px blue;
+}
+ol.navbar li.text6{
+  text-shadow: 0px 0px 10px red, 0 0 5px blue;
 }
   
 @media screen and (max-width: 600px) {
