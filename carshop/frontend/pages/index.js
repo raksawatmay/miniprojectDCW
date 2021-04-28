@@ -26,7 +26,7 @@ export default function Home({ token }) {
     <div className={styles.title}>
     <marquee bgcolor="#A9E0B8" direction="lefe" scrollamount="5" width="100%" height="60px"><ins>Welcome to CarShop</ins></marquee></div>
       <div className={styles.showvideo}>
-        <h1><center>Product Launch (BMW M8)</center></h1> 
+        <h1><center><b>Product Launch (BMW M8)</b></center></h1> <br/>
           <animated.div >
             <center>
               <div className={styles.video}><YouTube id='3N3qYZCMVYM' ></YouTube></div> 
