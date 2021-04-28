@@ -24,7 +24,7 @@ export default function Home({ token }) {
     <Navbar />
     <div className={styles.container}>
     <div className={styles.title}>
-    <marquee bgcolor="#A9E0B8" direction="lefe" scrollamount="5" width="100%" height="60px"><ins>Welcome to CarShop</ins></marquee></div>
+    <marquee bgcolor="#FFCCCC" direction="lefe" scrollamount="5" width="100%" height="60px"><ins>Welcome to CarShop</ins></marquee></div>
       <div className={styles.showvideo}>
         <h1><center><b>Product Launch (BMW M8)</b></center></h1> <br/>
           <animated.div >
