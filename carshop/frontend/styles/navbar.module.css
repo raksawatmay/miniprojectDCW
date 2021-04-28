@@ -1,0 +1,35 @@
+#topbar{
+  margin: 0;
+  padding: 0;
+}
+ol.navbar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 20px;
+  background-color: #333;
+}
+ol.navbar li {float:left}
+
+ol.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+ol.navbar li a:hover:not(.active) {background-color:  lightblue;}
+
+ol.navbar li.right {float: right;}
+
+ol.navbar li.text{
+  text-shadow: 0px 0px 20px orangered, 0 0 5px blue;
+}
+  
+@media screen and (max-width: 600px) {
+    ol.navbar li.right, 
+    ol.navbar li {float: none;}
+}
+  

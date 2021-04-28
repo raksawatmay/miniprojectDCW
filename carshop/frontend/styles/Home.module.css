@@ -5,12 +5,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    opacity: 0.82;
+    color: azure;
+    background-color: url('../public/pic/carshoeroom.jpg');
 }
 
 .content {
     min-width: 25vw;
 }
+  
+.title a:hover,
+.title a:focus,
+.title a:active {
+    text-decoration: underline;
+  }
+  
+.title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    font-weight: bold;
+    color: green;
+  }
+  
+.title,
+.description {
+    text-align: center;
+  }  
 
 .gridContainer {
     display: grid;
@@ -61,21 +85,21 @@
     cursor: pointer;
   }
   
-  .btn {
+.btn {
       background-color: green;
       color: whitesmoke;
       font-size: 1rem;
       margin-top: 10px;
       border: 2px solid green;
   }
-  .btn:hover{
+.btn:hover{
       background-color: rgb(15, 177, 15);
       color: #fff;
       font-size: 1rem;
       margin-top: 10px;
       border: 2px solid rgb(15, 177, 15);
   }
-  .btn1{
+.btn1{
     background-color: brown;
     border-radius: 10%;
     border: none;
@@ -89,21 +113,21 @@
     cursor: pointer;
   }
   
-  .btn1 {
+.btn1 {
       background-color: brown;
       color: whitesmoke;
       font-size: 1rem;
       margin-top: 10px;
       border: 2px solid brown;
   }
-  .btn1:hover{
+.btn1:hover{
       background-color: red;
       color: #fff;
       font-size: 1rem;
       margin-top: 10px;
       border: 2px solid red;
   }
-  .btn2{
+.btn2{
     background-color: rgb(34, 183, 233);
     border-radius: 10%;
     border: none;
@@ -117,17 +141,31 @@
     cursor: pointer;
   }
   
-  .btn2 {
+.btn2 {
       background-color: rgb(34, 183, 233);
       color: whitesmoke;
       font-size: 1rem;
       margin-top: 10px;
       border: 2px solid rgb(34, 183, 233);
   }
-  .btn2:hover{
+.btn2:hover{
       background-color: rgb(10, 152, 192);
       color: #fff;
       font-size: 1rem;
       margin-top: 10px;
       border: 2px solid rgb(10, 152, 192);
+  }
+.video{
+    width:800px;
+    height:500px;
+  }
+.showvideo{
+        margin: 1rem;
+        flex-basis: 45%;
+        padding: 1.5rem;
+        text-align: left;
+        color: inherit;
+        border: 3px solid #eaeaea;
+        border-radius: 10px;
+        background-color: grey ;
   }

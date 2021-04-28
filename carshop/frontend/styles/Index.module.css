@@ -1,13 +1,26 @@
 .container {
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
+    min-height: 100vh;
+    padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    
+    background-color: url('../public/pic/showroomcar.jpg');
 }
+
+.slide {
+        margin: 1rem;
+        flex-basis: 45%;
+        padding: 1.5rem;
+        text-align: left;
+        color: inherit;
+        text-decoration: none;
+        border: 1px solid #eaeaea;
+        border-radius: 10px;
+        background-color: grey ;
+        
+      }
 
 .title {
     font-size: 3rem;
