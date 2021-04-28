@@ -7,7 +7,7 @@
     align-items: center;
     opacity: 0.82;
     color: azure;
-    background-color: url('../public/pic/carshoeroom.jpg');
+    background-image: url('../public/pic/carshoeroom.jpg');
 }
 
 .content {
