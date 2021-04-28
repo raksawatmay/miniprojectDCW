@@ -81,9 +81,9 @@ export default function Register({ token }) {
                 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
                 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
                 <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-            </Head>
+            </Head> 
+            <Navbar />
             <div className={styles.container}>
-                <Navbar />
                 <h1>Register</h1>
                 <div><b>Token:</b> {token.substring(0, 15)}...
                 <button

@@ -76,8 +76,8 @@ export default function Login({ token }) {
         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
       </Head>
+      <Navbar />
       <div className={styles.container}>
-        <Navbar />
         <h1>Login</h1>
         <div>
           <b>Token:</b> {token.substring(0, 15)}...
