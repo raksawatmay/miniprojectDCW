@@ -30,12 +30,12 @@ export default function Logout({ token }) {
                 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
                 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
                 <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-            </Head>
+            </Head> 
+            <Navbar />
             <div className={styles.container}>
-                <Navbar />
-                <h1>Logout</h1>
+            <h1><i><ins>Admin Logout</ins></i></h1><br/>
                 <div>
-                    <h2> {status}  </h2>
+                    <h1 className={styles.texth1}>Status: {status}  </h1>
                 </div>
             </div>
         </Layout>

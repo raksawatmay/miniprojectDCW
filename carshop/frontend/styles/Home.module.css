@@ -159,7 +159,7 @@
     width:800px;
     height:500px;
   }
-.showvideo{
+.showvideo,.showvideo1{
         margin: 1rem;
         flex-basis: 45%;
         padding: 1.5rem;
@@ -167,5 +167,12 @@
         color: inherit;
         border: 3px solid #eaeaea;
         border-radius: 10px;
-        background-color: grey ;
+        background-color: lightgray ;
+  }
+  .showvideo1{
+    color: brown;
+  }
+
+  .texth1{
+    text-shadow: 0px 0px 20px purple, 0 0 5px blue;
   }

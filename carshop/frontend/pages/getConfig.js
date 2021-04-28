@@ -15,14 +15,16 @@ const GetConfig = () => {
             <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
             <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
         </Head>
+        <Navbar />
         <div className={styles.container}>
-            <Navbar />
+        <div className={styles.showvideo1}>
             <h2> Get Configuration from ../config/config.js </h2>
             <b>Config: </b> {JSON.stringify(config)}
             <ul>
                 <li>npm run dev  (for development mode)</li>
                 <li>npm run build; npm run start  (for production mode)</li>
             </ul>
+        </div>
         </div>
 
     </Layout>)
