@@ -5,11 +5,7 @@ import { animated } from "react-spring";
 import React from 'react';
 import YouTube from 'react-youtube-embed';
 
-export function getServerSideProps({ req, res }) {
-  return { props: { token: req.cookies.token || "" } };
-}
-
-export default function Home({ token }) {
+const Index = ({ token }) => {
     
   return (
    <div>
@@ -38,3 +34,10 @@ export default function Home({ token }) {
     </div>
   )
 }
+
+export function getServerSideProps({ req, res }) {
+  return { props: { token: req.cookies.token || "" } };
+}
+
+export default Index;
+

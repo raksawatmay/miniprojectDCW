@@ -40,11 +40,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width:auto;
-    align-items: center;
+    width: auto;
+    height: auto;
     margin: 10px;
-    border: 4px solid blueviolet;
-    padding: 2rem;
+    border: 4px solid green;
+    padding: 1rem;
     border-radius: 5px;
 }
 .listItem > div{
@@ -78,4 +78,13 @@
     margin-top: 10px;
     border: 2px solid brown;
 }
-
+.text{
+    font-size: 5rem;
+    color: green;
+    background-color: #fff;
+    opacity: 0.90;
+    
+}
+.text4{
+    color: brown;
+  }

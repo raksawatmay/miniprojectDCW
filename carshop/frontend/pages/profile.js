@@ -41,16 +41,21 @@ const Profile1 = ({ token }) => {
             </Head>
             <Navbar />
             <div className={styles.container}>
-                <h1>User profile</h1>
-                <div>
+            <div className={styles.title}>
+                <h1 className={styles.texttitle}><ins><b>User profile</b></ins></h1> 
+            </div>
+                <div className={styles.showvideo2}>
                     <b>Token:</b> {token.substring(0, 15)}... <br /><br />
                     This route is protected by token, user is required to login first.
                     <br/>
                     Otherwise, it will be redirect to Login page
                     <br/><br/>
-                    {JSON.stringify(user)}
+                    <center><img src="/./pic/icon.png" alt="icon" width="200" height="200"></img></center>
+                    <h5><b>{JSON.stringify(user)}</b></h5>
+                    
                 </div>
             </div>
+           
         </Layout>
     )
 }

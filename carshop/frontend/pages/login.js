@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from 'next/link';
 import Layout from "../components/layout";
 import { useState } from "react";
 import Navbar from "../components/navbar";
@@ -30,21 +31,19 @@ export default function Login({ token }) {
 
   const loginForm = () => (
     <div className={styles.gridContainer}>
-      <div><b>Username:</b></div>
+      <div className={styles.name}><b>Username:</b></div>
       <div>
         <input
           type="text"
           name="username"
-          placeholder="username"
           onChange={(e) => setUsername(e.target.value)}
         />
       </div>
-      <div><b>Password:</b></div>
+      <div className={styles.name}><b>Password:</b></div>
       <div>
         <input
           type="password"
           name="password"
-          placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
@@ -78,18 +77,27 @@ export default function Login({ token }) {
       </Head>
       <Navbar />
       <div className={styles.container}>
-        <h1>Login</h1>
+      <div className={styles.showlogin}>
+       <center><h1><ins><i><b>Admin Login</b></i></ins></h1>
         <div>
           <b>Token:</b> {token.substring(0, 15)}...
           <button className={styles.btn1} onClick={copyText}> Copy token </button>
-        </div>
+        </div></center> 
         <br />
-        <div>Status: {status}</div>
+        <div className={styles.text4}><h4><b>Status: <i>{status}</i></b></h4></div>
         <br />
         {loginForm()}
+        <center>
         <div>
           <button className={styles.btn2} onClick={login}>Login</button>
         </div>
+        <h4 className={styles.texth4}><ins><i>Do not have an account?</i></ins></h4>
+        </center>
+        <div className={styles.right}>
+        <Link href="/register"><button className={styles.btn}>Register</button></Link>
+        </div>
+        
+      </div>
       </div>
     </Layout>
   );

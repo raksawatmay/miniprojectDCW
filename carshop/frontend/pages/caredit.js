@@ -80,7 +80,7 @@ const admin = ({ token }) => {
             <b>Brand:</b> {item.brand} <br />
             <b>Model:</b> {item.model} <br />
             <b>Color:</b> {item.color} <br />
-            <b>Price:</b> {item.price} <br />
+            <b>Price:</b> {item.price} ฿.<br />
             <div><Image src={item.src} alt="car1" width={150} height={150}/></div>
             <div className={styles.edit_button}>
               <button
@@ -111,7 +111,7 @@ const admin = ({ token }) => {
     }
   };
   return (
-    <div className={styles.container}>
+    <div>
       <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
@@ -119,6 +119,7 @@ const admin = ({ token }) => {
         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
       <Navbar />
+      <div className={styles.container}>
       <h1><ins>Car Data Edit </ins></h1>
       <div className={styles.form_add}>
         <h2>Add Cars</h2>
@@ -164,6 +165,7 @@ const admin = ({ token }) => {
       <div>
         <div className={styles.list1}><b><i><ins>(selected car)</ins></i></b> <b> &nbsp;Brand:</b>{car.brand}<b>&nbsp;Model:</b>{car.model} <b>&nbsp;Color:</b>{car.color}&nbsp;<b>Price:</b>{car.price} </div>
       </div>
+    </div>
     </div>
   );
 };

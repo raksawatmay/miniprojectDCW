@@ -159,7 +159,7 @@
     width:800px;
     height:500px;
   }
-.showvideo,.showvideo1{
+.showvideo,.showvideo1,.showlogin,.showstore,.showvideo2{
         margin: 1rem;
         flex-basis: 45%;
         padding: 1.5rem;
@@ -170,10 +170,35 @@
         background-color: lightgray ;
         color: orangered;
   }
-  .showvideo1{
+.showvideo2{
+  color: purple;
+}
+  .showvideo1,.showstore{
     color: brown;
+  }
+  .showlogin{
+    color: blue;
   }
 
   .texth1{
     text-shadow: 0px 0px 20px purple, 0 0 5px blue;
   }
+  .texth4{
+    color: black;
+  }
+  .text4{
+    color: brown;
+  }
+  .name{
+    color: purple;
+  }
+  .right{
+    text-align: right;
+  }
+  .texttitle{
+    font-size: 5rem;
+    color: purple;
+    background-color: #fff;
+    opacity: 0.90;
+    
+}
