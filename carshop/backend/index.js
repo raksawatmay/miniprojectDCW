@@ -103,8 +103,7 @@ router.get("/", (req, res, next) => {
         { "id": 1, "brand": "BENZ","model": "#963471","color": "Black" ,"price": 1800000, "src":"/./pic/1.png"},
         { "id": 2, "brand": "BMW","model": "#789145","color": "White" ,"price": 2100000, "src":"/./pic/2.png"},
         { "id": 3, "brand": "TOYOTA","model": "#843271","color": "Red" ,"price": 1799000, "src":"/./pic/3.png"},
-        { "id": 4, "brand": "HONDA","model": "#432186","color": "Blue" ,"price": 839000, "src":"/./pic/4.png"},
-        { "id": 5, "brand": "MITSUBISHI","model": "#527439","color": "Orange" ,"price": 960000, "src":"/./pic/5.png"}]
+        { "id": 4, "brand": "HONDA","model": "#432186","color": "Blue" ,"price": 839000, "src":"/./pic/4.png"}]
     }
   
   router
@@ -138,11 +137,11 @@ router.get("/", (req, res, next) => {
       cars.list[id].color = req.body.color;
       cars.list[id].price = req.body.price;
       cars.list[id].src = req.body.src;
-      res.json(cars.list);
+      res.json(cars);
     })
     .delete((req, res) => {
       cars.list = cars.list.filter((item) => +item.id !== +req.params.carid);
-      res.json(cars.list);
+      res.json(cars);
     });
   
   
