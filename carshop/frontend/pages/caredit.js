@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import Layout from '../components/layout'
 import Navbar from '../components/navbar'
-import styles from '../styles/admin.module.css'
+import styles from '../styles/caredit.module.css'
 import style from '../styles/Index.module.css'
 import useSWR, { mutate } from 'swr';
 import withAuth from '../components/withAuth'
