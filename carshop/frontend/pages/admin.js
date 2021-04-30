@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Layout from '../components/layout'
 import Navbar from '../components/navbar'
 import styles from '../styles/admin.module.css'
+import style from '../styles/Index.module.css'
 import useSWR, { mutate } from 'swr';
 import withAuth from '../components/withAuth'
 import axios from 'axios';
@@ -61,8 +62,8 @@ const showcars =()=>{
                 {data.list.map((item,index)=>{
                     return(
                         <div>
-                            <center><div><img src={item.src} alt="Car" width={200} height={200}/></div></center>
                             <div className={styles.listItem} key={index}>
+                            <center><div><img src={item.src} alt="Car" width={200} height={200}/></div></center>
                             <div><b>Brand:</b> {item.brand}</div>
                             <div><b>Model:</b> {item.model} </div>
                             <div><b>Color:</b> {item.color}</div>
@@ -97,8 +98,8 @@ const showcars =()=>{
           <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
       </Head>
       <Navbar />
-      <div className={styles.container}>
-      <h1><ins>Car Data Edit </ins></h1>
+      <div className={styles.container}><div className={styles.text}>
+      <h1><ins>Car Data Edit </ins></h1></div>
           <br></br>
           <div className={styles.form_add}>
           <h2>Add New Car</h2>
@@ -110,14 +111,16 @@ const showcars =()=>{
             <br></br>
             <center><button  className={styles.button_add} onClick={() => addcar(brand,model,color,price,src)} >Add New Car</button></center>
          </div>
+         <div className={style.showcar}>
          <div className={styles.list}>
-             <h5>Show Cars</h5>
+             <h4><b><i>Show Cars</i></b></h4>
              {showcars()} 
           </div>
-         <div className={styles.list1}>
-         <div className={styles.list1}><b><i><ins>(selected car)</ins></i></b> <b> &nbsp;Brand:</b>{car.brand}<b>&nbsp;Model:</b>{car.model} <b>&nbsp;Color:</b>{car.color}&nbsp;<b>Price:</b>{car.price} ฿.</div>
-        </div> 
-      </div>      
+          </div><br/>
+         <div className={styles.show}><b><i><ins>(selected car)</ins></i></b> <b> &nbsp;Brand:</b>{car.brand}<b>&nbsp;Model:</b>{car.model} <b>&nbsp;Color:</b>{car.color}&nbsp;<b>Price:</b>{car.price} ฿.&nbsp;<b>Url Image:</b>{car.src}</div>
+      <br/><br/>
+      </div>   
+
     </Layout>
     )
 }

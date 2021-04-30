@@ -47,14 +47,14 @@ const fetcher = (key) => fetch(key).then((res) => res.json());
   return (
     <Layout>
        <Head>
-        <title>Home Page</title>
+        <title>Product Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     </Head>
     <Navbar />
     <div className={styles.container}>
       <div className={styles.title}>
-      <h1 className={style.text}><ins>CarShop</ins></h1></div>
+      <h1 className={style.text}><ins>CarStore</ins></h1></div>
       <div className={style.list}>
         {showCars()}
       </div>
